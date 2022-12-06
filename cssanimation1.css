@@ -1,0 +1,83 @@
+.box1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+animation-name: move-box;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+}
+
+@keyframes move-box{
+    from{
+        transform: translateX(0px) rotate(0deg);
+    }
+    to{
+        transform: translateX(300px) rotate(360deg);
+    }
+}
+.box2{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    border-radius: 200px;
+    animation-name: jump-box;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+}
+    @keyframes jump-box{
+        from{
+            transform: translatey(0px);
+        }
+        to{
+            transform: translatey(500px);
+        }
+}
+.box3{
+    width: 200px;
+    height: 200px;
+    background-color: violet;
+    animation-name: rotering-box;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: 2;
+}
+@keyframes rotering-box {
+    0%{
+        transform: translateX(0px) translateY(0px);
+    }
+    25%{
+        transform: translateX(200px) translateY(0px);
+    }
+    50%{
+        transform: translateX(200px) translateY(200px);
+    }
+    75%{
+        transform: translateX(0) translateY(200px);
+    }
+    100%{
+        transform: translateX(0) translateY(0);
+
+    }
+}
+.box4{
+width:100px;
+height:100px; 
+margin-top:180px; 
+transform-origin:200% center; position:relative; animation:rotate 3s linear infinite;
+position: absolute;
+top: 0px;
+ }
+.box4:before { 
+content:''; 
+position:absolute; 
+height:100%; width:100%; 
+background:orange; 
+border-radius: 100px;
+animation:rotate 3s linear reverse infinite; 
+
+}
+    @keyframes rotate { 100% { transform:rotate(-360deg); } }
